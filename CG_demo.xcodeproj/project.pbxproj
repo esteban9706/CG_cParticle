@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		CB07E7CD237621C600C4DB39 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB07E7CC237621C600C4DB39 /* main.cpp */; };
+		CB07E7D5237621D100C4DB39 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB07E7D4237621D100C4DB39 /* GLUT.framework */; };
+		CB07E7D7237621D800C4DB39 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB07E7D6237621D800C4DB39 /* OpenGL.framework */; };
+		CB07E7DA2376224900C4DB39 /* cParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CB07E7D92376224900C4DB39 /* cParticle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		CB07E7C9237621C600C4DB39 /* CG_demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CG_demo; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB07E7CC237621C600C4DB39 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		CB07E7D4237621D100C4DB39 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		CB07E7D6237621D800C4DB39 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		CB07E7D82376221A00C4DB39 /* cParticle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = cParticle.h; sourceTree = "<group>"; };
+		CB07E7D92376224900C4DB39 /* cParticle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = cParticle.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB07E7D5237621D100C4DB39 /* GLUT.framework in Frameworks */,
+				CB07E7D7237621D800C4DB39 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				CB07E7CB237621C600C4DB39 /* CG_demo */,
 				CB07E7CA237621C600C4DB39 /* Products */,
+				CB07E7D3237621D100C4DB39 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +68,19 @@
 			isa = PBXGroup;
 			children = (
 				CB07E7CC237621C600C4DB39 /* main.cpp */,
+				CB07E7D92376224900C4DB39 /* cParticle.cpp */,
+				CB07E7D82376221A00C4DB39 /* cParticle.h */,
 			);
 			path = CG_demo;
+			sourceTree = "<group>";
+		};
+		CB07E7D3237621D100C4DB39 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB07E7D6237621D800C4DB39 /* OpenGL.framework */,
+				CB07E7D4237621D100C4DB39 /* GLUT.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB07E7CD237621C600C4DB39 /* main.cpp in Sources */,
+				CB07E7DA2376224900C4DB39 /* cParticle.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +260,11 @@
 		CB07E7D1237621C600C4DB39 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5US9RUDD5S;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,9 +272,11 @@
 		CB07E7D2237621C600C4DB39 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5US9RUDD5S;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
